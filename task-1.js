@@ -1,15 +1,16 @@
 export const getDays = time => Math.floor(time / (1000 * 60 * 60 * 24));
 
-console.log(getDays());
+// console.log(getDays(1634578029713));
 
-export const getHours = time => Math.floor(time % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+export const getHours = time =>
+        Math.floor(time % (1000 * 60 * 60 * 24) / (1000*60*60) );
 
-console.log(getHours());
+// console.log(getHours(1634578029713));
 
-export const getMin = time => Math.floor(time % (1000 * 60 * 60 * 24) / (1000 * 60 ));
+export const getMins = time =>  Math.floor(time % (1000 * 60 * 60) / (1000*60) );
 
-console.log(getMin());
+// console.log(getMins(1634578675084));
 
-export const getSec = time => Math.floor(time % (1000 * 60 * 60 * 24) / (1000));
+export const getSeconds = time =>  Math.floor(time % (1000 * 60 ) / 1000 );
 
-console.log(getSec());
+// console.log(getSeconds(1634578675084));
